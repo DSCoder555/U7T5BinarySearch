@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class BinarySearchRunner
 {
   public static void main(String[] args)
@@ -11,6 +13,7 @@ public class BinarySearchRunner
     // test when the target is in the middle (found on the first try!)
     int idx = BinarySearch.binarySearch(arr, 23);
     System.out.println("the number 23 was found! it is located at index: " + idx);
+    System.out.println("Binary test: " + Arrays.binarySearch(arr, 23));
     
     // test when the target is found after TWO iterations 
     idx = BinarySearch.binarySearch(arr, 55);
@@ -97,6 +100,18 @@ public class BinarySearchRunner
     index = BinarySearch.binarySearchPrintedCommentary(arr2, 12);
     System.out.println(index);
     System.out.println("----------------------------------------------------");
+
+    //New Test Code
+    int[] arr3 = {-10, -6, 0, 2, 12, 14, 17, 23, 35, 45, 49, 55, 81, 100, 108};
+    System.out.println(Arrays.binarySearch(arr3, 23));
+    System.out.println(Arrays.binarySearch(arr3, -10));
+    System.out.println(Arrays.binarySearch(arr3, 108));
+    System.out.println(Arrays.binarySearch(arr3, 60));
+    int[] arr4 = {'a','b','c','e','h','x','z'};
+    System.out.println(Arrays.binarySearch(arr4, 'e'));
+    System.out.println(Arrays.binarySearch(arr4, 'a'));
+    System.out.println(Arrays.binarySearch(arr4, 'z'));
+    System.out.println(Arrays.binarySearch(arr4, 'd'));
 
   }
 }
